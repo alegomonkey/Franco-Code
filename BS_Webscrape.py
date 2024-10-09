@@ -9,9 +9,10 @@ Based on Chaofan Chen's example BS
 from bs4 import BeautifulSoup
 import requests
 #import time
+testurl = "https://francolibrary.com/items/show/1922"
 first_url = "https://francolibrary.com/items/show/3"
 url = "https://scholar.google.com/scholar?as_ylo=2024&q=machine+learning&hl=en&as_sdt=0,20"
-response = requests.get(first_url)
+response = requests.get(testurl)
 #print(response)
 
 html = response.content
@@ -34,26 +35,79 @@ for article in all_articles:
     creator = article.select_one('div#dublin-core-creator .element-text')
     if(creator != None):
         print(creator.text)
+    source = article.select_one('div#dublin-core-source .element-text')
+    if(source != None):
+        print(source.text)
+    publisher = article.select_one('div#dublin-core-publisher .element-text')
+    if(publisher != None):
+        print(creator.text)
     date = article.select_one('div#dublin-core-date .element-text')
     if(date != None):
         print(date.text)
+    contributor = article.select('div#dublin-core-contributor .element-text')
+    if(contributor != None):
+        for contribute in contributor:
+            print(contribute.text)
     language = article.select_one('div#dublin-core-language .element-text')
     if(language != None):
         print(language.text)
+    rights = article.select_one('div#dublin-core-rights .element-text')
+    if(rights != None):
+        print(rights.text)
+    relation = article.select_one('div#dublin-core-relation .element-text')
+    if(relation != None):
+        print(relation.text)
+    format = article.select_one('div#dublin-core-format .element-text')
+    if(format != None):
+        print(format.text)
     ########### ENTRY TYPE (might not be filled?) #############
     type1 = article.select_one('div#dublin-core-type .element-text')
     if(type1 != None):
         print(type1.text)
     ###### Identifier usually is html for a link ######
-    identifier = article.select_one('div#dublin-core-identifier .element-text a')
+    identifier = article.select('div#dublin-core-identifier .element-text a')
     if(identifier != None):
-        print(identifier)
+        for indentity in identifier:
+            print(indentity.text)
     coverage = article.select_one('div#dublin-core-coverage .element-text')
     if(coverage != None):
         print(coverage.text)
 
     ########### IGNORING CONTRIBUTION FORM ############
     ########### ZOTERO ###########
+    
+    
+    zotero_genre = article.select_one('div#zotero-genre .element-text')
+    if(zotero_genre != None):
+        print(zotero_genre.text)
+    zotero_distributor = article.select_one('div#zotero-distributor .element-text')
+    if(zotero_distributor != None):
+        print(zotero_distributor.text)
+    zotero_director = article.select_one('div#zotero-director .element-text')
+    if(zotero_director != None):
+        print(zotero_director.text)
+    zotero_performer = article.select('div#zotero-performer .element-text')
+    if(zotero_performer != None):
+        for performer in zotero_performer:
+            print(performer.text)
+    zotero_episode_number = article.select_one('div#zotero-episode-number .element-text')
+    if(zotero_episode_number != None):
+        print(zotero_episode_number.text)
+    zotero_language = article.select_one('div#zotero-language .element-text')
+    if(zotero_language != None):
+        print(zotero_language.text)
+    zotero_network = article.select_one('div#zotero-network .element-text')
+    if(zotero_network != None):
+        print(zotero_network.text)
+    zotero_audio_recording_format = article.select_one('div#zotero-audio-recording-format .element-text')
+    if(zotero_audio_recording_format != None):
+        print(zotero_audio_recording_format.text)
+    zotero_label = article.select_one('div#zotero-label .element-text')
+    if(zotero_label != None):
+        print(zotero_label.text)
+    zotero_running_time = article.select_one('div#zotero-running-time .element-text')
+    if(zotero_running_time != None):
+        print(zotero_running_time.text)
     zotero_num_pages = article.select_one('div#zotero-num-pages .element-text')
     if(zotero_num_pages != None):
         print(zotero_num_pages.text)
@@ -66,18 +120,29 @@ for article in all_articles:
     zotero_issn = article.select_one('div#zotero-issn .element-text')
     if(zotero_issn != None):
         print(zotero_issn.text)
+    zotero_isbn = article.select_one('div#zotero-isbn .element-text')
+    if(zotero_isbn != None):
+        print(zotero_isbn.text)
     zotero_issue = article.select_one('div#zotero-issue .element-text')
     if(zotero_issue != None):
         print(zotero_issue.text)
     zotero_publication_title = article.select_one('div#zotero-publication-title .element-text')
     if(zotero_publication_title != None):
         print(zotero_publication_title.text)
-    zotero_url = article.select_one('div#zotero-url .element-text')
+    zotero_url = article.select('div#zotero-url .element-text')
     if(zotero_url != None):
-        print(zotero_url.text)
+        for z_url in zotero_url:
+            print(z_url.text)
     zotero_volume = article.select_one('div#zotero-volume .element-text')
     if(zotero_volume != None):
         print(zotero_volume.text)
+    zotero_short_title = article.select_one('div#zotero-short-title .element-text')
+    if(zotero_short_title != None):
+        print(zotero_short_title.text)
+    zotero_references = article.select('div#zotero-references .element-text')
+    if(zotero_references != None):
+        for z_ref in zotero_references:
+            print(z_ref.text)
 
     ############### TYPE AGAIN ##############
     type2 = article.select_one('h2')
@@ -88,9 +153,11 @@ for article in all_articles:
 
     #print(authors_venue_year.get_text(strip=False))
 
-itemfiles = soup.select_one('div#itemfiles div.element-text a')
-href = itemfiles.get('href', '')
-print(href)
+# NEED CHECKER FOR JPG vs other filetypes 
+itemfiles = soup.select('div#itemfiles div.element-text a')
+for itemF in itemfiles:
+    href = itemF.get('href', '')
+    print(href)
 
 collection = soup.select_one('div#collection div.element-text p a')
 print(collection.text)
