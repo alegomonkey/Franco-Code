@@ -13,15 +13,17 @@ import pandas as pd
 
 #SETUP PANDAS DATAFRAME
 data = {"title":[], "description":[], "creator":[], "source":[], "publisher":[], "date":[],
-         "contributor":[], "language":[], "rights":[], "relation":[], "format":[], "type1":[],
-         "identifier":[], "coverage":[], "zotero_genre":[],"zotero_distributor":[],"zotero_director":[],
-         "z_performer":[],"zotero_episode_number":[], "zotero_language":[],"zotero_network":[],
-         "zotero_audio_recording_format":[],"zotero_label":[], "zotero_running_time":[],
-         "zotero_num_pages":[],"zotero_place":[],"zotero_publisher":[],
-         "zotero_issn":[],"zotero_isbn":[],"zotero_issue":[],"zotero_publication_title":[],"z_url":[],
-         "zotero_volume":[],"zotero_short_title":[],"z_ref":[],"type2":[],"files":[],
-         "tags":[]}
-df = pd.DataFrame(data)
+        "contributor":[], "language":[], "rights":[], "relation":[], "format":[], "type1":[],
+        "identifier":[], "coverage":[], "zotero_genre":[],"zotero_distributor":[],"zotero_director":[],
+        "z_performer":[],"zotero_episode_number":[], "zotero_language":[],"zotero_network":[],
+        "zotero_audio_recording_format":[],"zotero_label":[], "zotero_running_time":[],
+        "zotero_num_pages":[],"zotero_place":[],"zotero_publisher":[],
+        "zotero_issn":[],"zotero_isbn":[],"zotero_issue":[],"zotero_publication_title":[],"z_url":[],
+        "zotero_volume":[],"zotero_short_title":[],"z_ref":[],"type2":[],"files":[],
+        "tags":[]}
+new_row = data
+#df = pd.DataFrame(data)
+#df.head()
 
 
 testurl = "https://francolibrary.com/items/show/1922"
@@ -56,129 +58,186 @@ for article in all_articles:
     #title = article.find("div", class_="dublin-core-title")
     title = article.select_one('div#dublin-core-title .element-text')
     if(title != None):
-        print(title.text)
+        new_row["title"].append(title.text)
+    
     description = article.select_one('div#dublin-core-description .element-text')
     if(description != None):
-        print(description.text)
+        new_row["description"].append(description.text)
+
     creators = article.select('div#dublin-core-creator .element-text')
     if(creators != None):
+        creatorlist = []
         for creator in creators:
-            print(creator.text)
+            creatorlist.append(creator.text)
+        if creatorlist != []:
+            new_row["creator"].append(creatorlist)
+    
     sources = article.select('div#dublin-core-source .element-text')
     if(sources != None):
+        sourcelist = []
         for source in sources:
-            print(source.text)
+            sourcelist.append(source.text)
+        if sourcelist != []:
+            new_row["source"].append(sourcelist)
+    
     publishers = article.select('div#dublin-core-publisher .element-text')
     if(publishers != None):
+        publisherlist = []
         for publisher in publishers:
-            print(publisher.text)
+            publisherlist.append(publisher.text)
+        if publisherlist != []:
+            new_row["publisher"].append(publisherlist)
+    
     date = article.select_one('div#dublin-core-date .element-text')
     if(date != None):
-        print(date.text)
+        new_row["date"].append(date.text)
+    
     contributors = article.select('div#dublin-core-contributor .element-text')
     if(contributors != None):
+        contributorlist = []
         for contributor in contributors:
-            print(contributor.text)
+            contributorlist.append(contributor.text)
+        if contributorlist != []:
+            new_row["contributor"].append(contributorlist)
+    
     languages = article.select('div#dublin-core-language .element-text')
     if(languages != None):
+        languagelist = []
         for language in languages:
-            print(language.text)
+            languagelist.append(language.text)
+        if languagelist != []:
+            new_row["language"].append(languagelist)
+   
     rights = article.select_one('div#dublin-core-rights .element-text')
     if(rights != None):
-        print(rights.text)
+        new_row["rights"].append(rights.text)
+    
     relation = article.select_one('div#dublin-core-relation .element-text')
     if(relation != None):
-        print(relation.text)
+        new_row["relation"].append(relation.text)
+    
     format = article.select_one('div#dublin-core-format .element-text')
     if(format != None):
-        print(format.text)
+        new_row["format"].append(format.text)
     ########### ENTRY TYPE (might not be filled?) #############
     type1 = article.select_one('div#dublin-core-type .element-text')
     if(type1 != None):
-        print(type1.text)
+        new_row["type1"].append(type1.text)
     ###### Identifier usually is html for a link ######
     identifiers = article.select('div#dublin-core-identifier .element-text a')
     if(identifiers != None):
+        identifierlist = []
         for identifier in identifiers:
-            print(identifier.text)
+            identifierlist.append(identifier.text)
+        if identifierlist != []:
+            new_row["identifier"].append(identifierlist)
+
     coverage = article.select_one('div#dublin-core-coverage .element-text')
     if(coverage != None):
-        print(coverage.text)
+        new_row["coverage"].append(coverage.text)
 
     ########### IGNORING CONTRIBUTION FORM ############
     ########### ZOTERO ###########
-    
     zotero_genre = article.select_one('div#zotero-genre .element-text')
     if(zotero_genre != None):
-        print(zotero_genre.text)
+        new_row["zotero_genre"].append(zotero_genre.text)
+    
     zotero_distributor = article.select_one('div#zotero-distributor .element-text')
     if(zotero_distributor != None):
-        print(zotero_distributor.text)
+        new_row["zotero_distributor"].append(zotero_distributor.text)
+    
     zotero_director = article.select_one('div#zotero-director .element-text')
     if(zotero_director != None):
-        print(zotero_director.text)
+        new_row["zotero_director"].append(zotero_director.text)
+    
     zotero_performer = article.select('div#zotero-performer .element-text')
     if(zotero_performer != None):
+        z_performerlist = []
         for z_performer in zotero_performer:
-            print(z_performer.text)
+            z_performerlist.append(z_performer.text)
+        if z_performerlist != []:
+            new_row["z_performer"].append(z_performerlist)
+    
     zotero_episode_number = article.select_one('div#zotero-episode-number .element-text')
     if(zotero_episode_number != None):
-        print(zotero_episode_number.text)
+        new_row["zotero_episode_number"].append(zotero_episode_number.text)
+    
     zotero_language = article.select_one('div#zotero-language .element-text')
     if(zotero_language != None):
-        print(zotero_language.text)
+        new_row["zotero_language"].append(zotero_language.text)
+    
     zotero_network = article.select_one('div#zotero-network .element-text')
     if(zotero_network != None):
-        print(zotero_network.text)
+        new_row["zotero_network"].append(zotero_network.text)
+    
     zotero_audio_recording_format = article.select_one('div#zotero-audio-recording-format .element-text')
     if(zotero_audio_recording_format != None):
-        print(zotero_audio_recording_format.text)
+        new_row["zotero_audio_recording_format"].append(zotero_audio_recording_format.text)
+    
     zotero_label = article.select_one('div#zotero-label .element-text')
     if(zotero_label != None):
-        print(zotero_label.text)
+        new_row["zotero_label"].append(zotero_label.text)
+    
     zotero_running_time = article.select_one('div#zotero-running-time .element-text')
     if(zotero_running_time != None):
-        print(zotero_running_time.text)
+        new_row["zotero_running_time"].append(zotero_running_time.text)
+    
     zotero_num_pages = article.select_one('div#zotero-num-pages .element-text')
     if(zotero_num_pages != None):
-        print(zotero_num_pages.text)
+        new_row["zotero_num_pages"].append(zotero_num_pages.text)
+    
     zotero_place = article.select_one('div#zotero-place .element-text')
     if(zotero_place != None):
-        print(zotero_place.text)
+        new_row["zotero_place"].append(zotero_place.text)
+    
     zotero_publisher = article.select_one('div#zotero-publisher .element-text')
     if(zotero_publisher != None):
-        print(zotero_publisher.text)
+        new_row["zotero_publisher"].append(zotero_publisher.text)
+    
     zotero_issn = article.select_one('div#zotero-issn .element-text')
     if(zotero_issn != None):
-        print(zotero_issn.text)
+        new_row["zotero_issn"].append(zotero_issn.text)
+    
     zotero_isbn = article.select_one('div#zotero-isbn .element-text')
     if(zotero_isbn != None):
-        print(zotero_isbn.text)
+        new_row["zotero_isbn"].append(zotero_isbn.text)
+    
     zotero_issue = article.select_one('div#zotero-issue .element-text')
     if(zotero_issue != None):
-        print(zotero_issue.text)
+        new_row["zotero_issue"].append(zotero_issue.text)
+    
     zotero_publication_title = article.select_one('div#zotero-publication-title .element-text')
     if(zotero_publication_title != None):
-        print(zotero_publication_title.text)
+        new_row["zotero_publication_title"].append(zotero_publication_title.text)
+    
     zotero_url = article.select('div#zotero-url .element-text')
     if(zotero_url != None):
+        z_urllist = []
         for z_url in zotero_url:
-            print(z_url.text)
+            z_urllist.append(z_url.text)
+        if z_urllist != []:
+            new_row["z_url"].append(z_urllist)
+
     zotero_volume = article.select_one('div#zotero-volume .element-text')
     if(zotero_volume != None):
-        print(zotero_volume.text)
+        new_row["zotero_volume"].append(zotero_volume.text)
+    
     zotero_short_title = article.select_one('div#zotero-short-title .element-text')
     if(zotero_short_title != None):
-        print(zotero_short_title.text)
+        new_row["zotero_short_title"].append(zotero_short_title.text)
+    
     zotero_references = article.select('div#zotero-references .element-text')
     if(zotero_references != None):
+        z_reflist = []
         for z_ref in zotero_references:
-            print(z_ref.text)
+            z_reflist.append(z_ref.text)
+        if z_reflist != []:
+            new_row["z_ref"].append(z_reflist)
 
     ############### TYPE AGAIN ##############
     type2 = article.select_one('h2')
     if(type2 != None):
-        print(type2.text)
+        new_row["type2"].append(type2.text)
     
     
 
@@ -186,18 +245,33 @@ for article in all_articles:
 
 # NEED CHECKER FOR JPG vs other filetypes 
 itemfiles = soup.select('div#itemfiles div.element-text a')
+fileslist = []
 for itemF in itemfiles:
     files = itemF.get('href', '')
-    print(files)
+    fileslist.append(files)
+if fileslist != []:
+    new_row["files"].append(fileslist)
 
 collection = soup.select_one('div#collection div.element-text p a')
 print(collection.text)
 
 # |||||||||||||||||| TAGS HERE do checks? |||||||||||||||||||||||||
 tags = soup.select('div#item-tags div.element-text a')
-#for tag in tags:
-#    print(tag.text)
+taglist = []
+for tag in tags:
+    taglist.append(tag.text)
+new_row["tags"].append(taglist)
 
-print()
-df.head()
+for key in new_row:
+    if new_row[key] == []:
+        new_row[key].append(pd.NA)
+
+for key in new_row:
+    print(new_row[key])
+
+df = pd.DataFrame.from_records(data)
+
+#df.head()
+
+
 
