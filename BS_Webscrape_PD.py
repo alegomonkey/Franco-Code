@@ -253,23 +253,24 @@ if fileslist != []:
     new_row["files"].append(fileslist)
 
 collection = soup.select_one('div#collection div.element-text p a')
-print(collection.text)
+#print(collection.text)
 
 # |||||||||||||||||| TAGS HERE do checks? |||||||||||||||||||||||||
 tags = soup.select('div#item-tags div.element-text a')
-taglist = []
+taglist = ""
 for tag in tags:
-    taglist.append(tag.text)
+    taglist += tag.text + ";"
 new_row["tags"].append(taglist)
 
 for key in new_row:
-    if new_row[key] == []:
+    if new_row[key] == "":
         new_row[key].append(pd.NA)
 
 for key in new_row:
     print(new_row[key])
 
-df = pd.DataFrame.from_records(data)
+#print(data)
+#df = pd.DataFrame.from_records(data)
 
 #df.head()
 
