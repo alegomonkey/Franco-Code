@@ -269,9 +269,15 @@ for key in new_row:
 for key in new_row:
     print(new_row[key])
 
+<<<<<<< Updated upstream
 #print(data)
 #df = pd.DataFrame.from_records(data)
 
+=======
+#df = pd.DataFrame.from_records(data)
+df = pd.DataFrame(data)
+df.to_csv('franco_articles.csv')
+>>>>>>> Stashed changes
 #df.head()
 
 
