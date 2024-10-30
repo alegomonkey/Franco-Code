@@ -66,27 +66,27 @@ for article in all_articles:
 
     creators = article.select('div#dublin-core-creator .element-text')
     if(creators != None):
-        creatorlist = []
+        creatorStr = ""
         for creator in creators:
-            creatorlist.append(creator.text)
-        if creatorlist != []:
-            new_row["creator"].append(creatorlist)
+            creatorStr += creator.text + ";"
+        if creatorStr != "":
+            new_row["creator"].append(creatorStr[:-1])
     
     sources = article.select('div#dublin-core-source .element-text')
     if(sources != None):
-        sourcelist = []
+        sourcelist = ""
         for source in sources:
-            sourcelist.append(source.text)
-        if sourcelist != []:
-            new_row["source"].append(sourcelist)
+            sourcelist += source.text + ";"
+        if sourcelist != "":
+            new_row["source"].append(sourcelist[:-1])
     
     publishers = article.select('div#dublin-core-publisher .element-text')
     if(publishers != None):
-        publisherlist = []
+        publisherlist = ""
         for publisher in publishers:
-            publisherlist.append(publisher.text)
-        if publisherlist != []:
-            new_row["publisher"].append(publisherlist)
+            publisherlist += (publisher.text) + ";"
+        if publisherlist != "":
+            new_row["publisher"].append(publisherlist[:-1])
     
     date = article.select_one('div#dublin-core-date .element-text')
     if(date != None):
@@ -94,19 +94,19 @@ for article in all_articles:
     
     contributors = article.select('div#dublin-core-contributor .element-text')
     if(contributors != None):
-        contributorlist = []
+        contributorlist = ""
         for contributor in contributors:
-            contributorlist.append(contributor.text)
-        if contributorlist != []:
-            new_row["contributor"].append(contributorlist)
+            contributorlist += (contributor.text) + ";"
+        if contributorlist != "":
+            new_row["contributor"].append(contributorlist[:-1])
     
     languages = article.select('div#dublin-core-language .element-text')
     if(languages != None):
-        languagelist = []
+        languagelist = ""
         for language in languages:
-            languagelist.append(language.text)
-        if languagelist != []:
-            new_row["language"].append(languagelist)
+            languagelist += (language.text) + ";"
+        if languagelist != "":
+            new_row["language"].append(languagelist[:-1])
    
     rights = article.select_one('div#dublin-core-rights .element-text')
     if(rights != None):
@@ -126,11 +126,11 @@ for article in all_articles:
     ###### Identifier usually is html for a link ######
     identifiers = article.select('div#dublin-core-identifier .element-text a')
     if(identifiers != None):
-        identifierlist = []
+        identifierlist = ""
         for identifier in identifiers:
-            identifierlist.append(identifier.text)
-        if identifierlist != []:
-            new_row["identifier"].append(identifierlist)
+            identifierlist += str(identifier) + ";"
+        if identifierlist != "":
+            new_row["identifier"].append(identifierlist[:-1])
 
     coverage = article.select_one('div#dublin-core-coverage .element-text')
     if(coverage != None):
@@ -152,11 +152,11 @@ for article in all_articles:
     
     zotero_performer = article.select('div#zotero-performer .element-text')
     if(zotero_performer != None):
-        z_performerlist = []
+        z_performerlist = ""
         for z_performer in zotero_performer:
-            z_performerlist.append(z_performer.text)
-        if z_performerlist != []:
-            new_row["z_performer"].append(z_performerlist)
+            z_performerlist += (z_performer.text) + ";"
+        if z_performerlist != "":
+            new_row["z_performer"].append(z_performerlist[:-1])
     
     zotero_episode_number = article.select_one('div#zotero-episode-number .element-text')
     if(zotero_episode_number != None):
@@ -212,11 +212,11 @@ for article in all_articles:
     
     zotero_url = article.select('div#zotero-url .element-text')
     if(zotero_url != None):
-        z_urllist = []
+        z_urllist = ""
         for z_url in zotero_url:
-            z_urllist.append(z_url.text)
-        if z_urllist != []:
-            new_row["z_url"].append(z_urllist)
+            z_urllist += (z_url.text) + ";"
+        if z_urllist != "":
+            new_row["z_url"].append(z_urllist[:-1])
 
     zotero_volume = article.select_one('div#zotero-volume .element-text')
     if(zotero_volume != None):
@@ -228,11 +228,11 @@ for article in all_articles:
     
     zotero_references = article.select('div#zotero-references .element-text')
     if(zotero_references != None):
-        z_reflist = []
+        z_reflist = ""
         for z_ref in zotero_references:
-            z_reflist.append(z_ref.text)
-        if z_reflist != []:
-            new_row["z_ref"].append(z_reflist)
+            z_reflist += (z_ref.text) + ";"
+        if z_reflist != "":
+            new_row["z_ref"].append(z_reflist[:-1])
 
     ############### TYPE AGAIN ##############
     type2 = article.select_one('h2')
@@ -245,12 +245,12 @@ for article in all_articles:
 
 # NEED CHECKER FOR JPG vs other filetypes 
 itemfiles = soup.select('div#itemfiles div.element-text a')
-fileslist = []
+fileslist = ""
 for itemF in itemfiles:
     files = itemF.get('href', '')
-    fileslist.append(files)
-if fileslist != []:
-    new_row["files"].append(fileslist)
+    fileslist += (files) + ";"
+if fileslist != "":
+    new_row["files"].append(fileslist[:-1])
 
 collection = soup.select_one('div#collection div.element-text p a')
 #print(collection.text)
@@ -260,18 +260,17 @@ tags = soup.select('div#item-tags div.element-text a')
 taglist = ""
 for tag in tags:
     taglist += tag.text + ";"
-new_row["tags"].append(taglist)
+new_row["tags"].append(taglist[:-1])
 
 for key in new_row:
-    if new_row[key] == "":
+    if new_row[key] == []:
         new_row[key].append(pd.NA)
 
-for key in new_row:
-    print(new_row[key])
+#for key in new_row:
+#    print(new_row[key])
 
-#print(data)
-#df = pd.DataFrame.from_records(data)
-
+print(new_row)
+#df = pd.DataFrame.from_records(new_row)
 #df.head()
 
 

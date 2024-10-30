@@ -10,6 +10,8 @@ data = {"title":[1], "description":[1], "creator":[1], "source":[1], "publisher"
         "zotero_volume":[1],"zotero_short_title":[1],"z_ref":[1],"type2":[1],"files":[1],
         "tags":[1]}
 
+testStr = "diawub;"
+print(testStr[:-1])
 new_row = data
 df = pd.DataFrame(data)
-print(df.head())
+#print(df.head())
