@@ -235,9 +235,10 @@ for article in all_articles:
             new_row["z_ref"].append(z_reflist[:-1])
 
     ############### TYPE AGAIN ##############
-    type2 = article.select_one('h2')
-    if(type2 != None):
-        new_row["type2"].append(type2.text)
+    # Ignoring - Dont need repitions
+    #type2 = article.select_one('h2')
+    #if(type2 != None):
+    #    new_row["type2"].append(type2.text)
     
     
 
@@ -272,9 +273,9 @@ for key in new_row:
 #print(new_row)
 #df = pd.DataFrame.from_records(new_row)
 
-#print(data)
+#print(new)
 #df = pd.DataFrame.from_records(data)
-df = pd.DataFrame(data)
+df = pd.DataFrame(new_row)
 df.to_csv('franco_articles.csv')
 #df.head()
 
