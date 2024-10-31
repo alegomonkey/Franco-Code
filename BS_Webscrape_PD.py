@@ -270,12 +270,9 @@ for key in new_row:
 #for key in new_row:
 #    print(new_row[key])
 
-#print(new_row)
-#df = pd.DataFrame.from_records(new_row)
-
-#print(new)
-#df = pd.DataFrame.from_records(data)
 df = pd.DataFrame(new_row)
+# df = pd.concat([df, pd.DataFrame(new_rows)], ignore_index=True)
+
 df.to_csv('franco_articles.csv')
 #df.head()
 
