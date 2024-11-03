@@ -36,10 +36,11 @@ page = 3
 current_url = base_url + str(page)
 
 
-while (page <= 4): 
+while (page <= 2202): 
     new_row = copy.deepcopy(data)
     current_url = base_url + str(page)
     page += 1
+    print("current page" + str(page))
 
     response = requests.get(current_url)
     #print(response)
@@ -274,7 +275,7 @@ while (page <= 4):
 
 #df = pd.DataFrame(new_row)
 
-df.to_csv('franco_articles.csv')
+df.to_csv('franco_articles_comp.csv')
 #df.head()
 
 
