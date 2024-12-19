@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = {"title":[1], "description":[1], "creator":[1], "source":[1], "publisher":[1], "date":[1],
+"""data = {"title":[1], "description":[1], "creator":[1], "source":[1], "publisher":[1], "date":[1],
         "contributor":[1], "language":[1], "rights":[1], "relation":[1], "format":[1], "type1":[1],
         "identifier":[1], "coverage":[1], "zotero_genre":[1],"zotero_distributor":[1],"zotero_director":[1],
         "z_performer":[1],"zotero_episode_number":[1], "zotero_language":[1],"zotero_network":[1],
@@ -12,4 +12,8 @@ data = {"title":[1], "description":[1], "creator":[1], "source":[1], "publisher"
 
 new_row = data
 df = pd.DataFrame(data)
-print(df.head())
+print(df.head())"""
+
+df = pd.read_csv('franco_articles_comp - v2.csv', encoding='utf-8', index_col=0)
+df_cleaned = df.dropna(subset=['description', 'coverage'])
+df_cleaned.to_csv('franco_articles_comp_cleaned.csv')
