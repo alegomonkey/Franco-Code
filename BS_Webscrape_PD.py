@@ -20,7 +20,7 @@ data = {"title":[], "description":[], "creator":[], "source":[], "publisher":[],
         "zotero_audio_recording_format":[],"zotero_label":[], "zotero_running_time":[],
         "zotero_num_pages":[],"zotero_place":[],"zotero_publisher":[],
         "zotero_issn":[],"zotero_isbn":[],"zotero_issue":[],"zotero_publication_title":[],"z_url":[],
-        "zotero_volume":[],"zotero_short_title":[],"z_ref":[],"type2":[],"files":[],
+        "zotero_volume":[],"zotero_short_title":[],"z_ref":[],"type2":[], "collection":[], "files":[],
         "tags":[]}
 new_row = copy.deepcopy(data)
 df = pd.DataFrame(data)
@@ -40,7 +40,7 @@ while (page <= 2202):
     new_row = copy.deepcopy(data)
     current_url = base_url + str(page)
     page += 1
-    print("current page" + str(page))
+    print("current page" + str(page-1))
 
     response = requests.get(current_url)
     #print(response)
@@ -254,6 +254,8 @@ while (page <= 2202):
         new_row["files"].append(fileslist[:-1])
 
     collection = soup.select_one('div#collection div.element-text p a')
+    if(collection != None):
+        new_row["collection"].append(collection.text)
     #print(collection.text)
 
     # |||||||||||||||||| TAGS HERE do checks? |||||||||||||||||||||||||

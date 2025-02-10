@@ -24,7 +24,7 @@ data = {"title":[], "description":[], "creator":[], "source":[], "publisher":[],
 df = pd.DataFrame(data)
 
 
-testurl = "https://francolibrary.com/items/show/1922"
+testurl = "https://francolibrary.com/items/show/3"
 first_url = "https://francolibrary.com/items/show/3"
 url = "https://scholar.google.com/scholar?as_ylo=2024&q=machine+learning&hl=en&as_sdt=0,20"
 
@@ -191,6 +191,7 @@ for itemF in itemfiles:
     print(files)
 
 collection = soup.select_one('div#collection div.element-text p a')
+print("COLLECTION: ")
 print(collection.text)
 
 # |||||||||||||||||| TAGS HERE do checks? |||||||||||||||||||||||||
