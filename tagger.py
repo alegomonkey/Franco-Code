@@ -12,9 +12,9 @@ def compare(inputList, outputList):
                 flag = 1
         if flag == 0:
             count = 0
-            item, n = re.subn('Ã§', 'ç', item)
-            item, n = re.subn('Ã©', 'é', item)
-            item, n = re.subn('Ã‰', 'è', item)
+            # item, n = re.subn('Ã§', 'ç', item)
+            # item, n = re.subn('Ã©', 'é', item)
+            # item, n = re.subn('Ã‰', 'è', item)
             for checkItem1 in CheckList:
                 if item == checkItem1:
                     flag = 1
