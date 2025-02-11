@@ -12,8 +12,19 @@ import pandas as pd
 
 new_row = data
 df = pd.DataFrame(data)
-print(df.head())"""
-
-df = pd.read_csv('franco_articles_comp - v2.csv', encoding='utf-8', index_col=0)
+print(df.head())
 df_cleaned = df.dropna(subset=['description', 'coverage'])
 df_cleaned.to_csv('franco_articles_comp_cleaned.csv')
+"""
+
+df = pd.read_excel('testoutput.xlsx')
+difflist = []
+for value in df["Unmatched_Tags"]:
+    # print(type(value))
+    if type(value) != float:
+        item = value.split(";")
+        for i in item:
+            if i not in difflist:
+                difflist.append(i)
+
+print(difflist)
