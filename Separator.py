@@ -15,7 +15,7 @@ for sheet_name, dataf in dfs.items():
        #print(type(val))
        print(str(count) + " " + str(sheet_name))
        count += 1
-       #dataf.to_excel(name)
+       dataf.to_excel(name)
        
 #print(dfs)
 #df.to_excel('testoutput.xlsx')
