@@ -1,5 +1,5 @@
-NEXT: Bibliographies: The Immigrant Experience in American Fiction : An Annotated Bibliography
-Folklore 2/2 | Photos 1/1 | Contributions 1/1 | Dictionaries 7/7 | Cookbooks 13/13 | Bibliographies 12/23
+NEXT: : 
+Folklore 2/2 | Photos 1/1 | Contributions 1/1 | Dictionaries 7/7 | Cookbooks 13/13 | Bibliographies 23/23
 California - <a href="https://francolibrary.org/items/browse?tags=California">California</a>
 Woonsocket RI - <a href="https://francolibrary.org/items/browse?tags=Woonsocket+RI">Woonsocket RI</a>
 Vermont - <a href="https://francolibrary.org/items/browse?tags=Vermont">Vermont</a>
@@ -48,3 +48,23 @@ Connecticut - <a href="https://francolibrary.org/items/browse?tags=Connecticut">
 Louisiana - <a href="https://francolibrary.org/items/browse?tags=Louisiana">Louisiana</a>
 Waterville ME - <a href="https://francolibrary.org/items/browse?tags=Waterville+ME">Waterville ME</a>
 Worcester MA - <a href="https://francolibrary.org/items/browse?tags=Worcester+MA">Worcester MA</a>
+Breaux Bridge LA - <a href="https://francolibrary.org/items/browse?tags=Breaux+Bridge+LA">Breaux Bridge LA</a>
+Caribou ME - <a href="https://francolibrary.org/items/browse?tags=Caribou+ME">Caribou ME</a>
+Florida - <a href="https://francolibrary.org/items/browse?tags=Florida">Florida</a>
+Frenchville ME - <a href="https://francolibrary.org/items/browse?tags=Frenchville+ME">Frenchville ME</a>
+Greenville NH - <a href="https://francolibrary.org/items/browse?tags=Greenville+NH">Greenville NH</a>
+Lafayette LA - <a href="https://francolibrary.org/items/browse?tags=Lafayette+LA">Lafayette LA</a>
+Lafayette Parish LA - <a href="https://francolibrary.org/items/browse?tags=Lafayette+Parish+LA">Lafayette Parish LA</a>
+St. Agatha ME - <a href="https://francolibrary.org/items/browse?tags=St.+Agatha+ME">St. Agatha ME</a>
+St. Landry Parish LA - <a href="https://francolibrary.org/items/browse?tags=St.+Landry+Parish+LA">St. Landry Parish LA</a>
+St. Martin Parish LA - <a href="https://francolibrary.org/items/browse?tags=St.+Martin+Parish+LA">St. Martin Parish LA</a>
+Labrador (Newfoundland and labrador on map)- <a href="https://francolibrary.org/items/browse?tags=Labrador">Labrador</a>
+Newfoundland - <a href="https://francolibrary.org/items/browse?tags=Newfoundland">Newfoundland</a>
+Nova Scotia - <a href="https://francolibrary.org/items/browse?tags=Nova+Scotia">Nova Scotia</a>
+Prince Edward Island - <a href="https://francolibrary.org/items/browse?tags=Prince+Edward+Island">Prince Edward Island</a>
+Burlington VT - <a href="https://francolibrary.org/items/browse?tags=Burlington+VT">Burlington VT</a>
+Lewiston ME - <a href="https://francolibrary.org/items/browse?tags=Lewiston+ME">Lewiston ME</a>
+Nashua NH - <a href="https://francolibrary.org/items/browse?tags=Nashua+NH">Nashua NH</a>
+New Bedford MA - <a href="https://francolibrary.org/items/browse?tags=New+Bedford+MA">New Bedford MA</a>
+St. Johnsbury VT - <a href="https://francolibrary.org/items/browse?tags=St.+Johnsbury+VT">St. Johnsbury VT</a>
+Winooski VT - <a href="https://francolibrary.org/items/browse?tags=Winooski+VT">Winooski VT</a>
