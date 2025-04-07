@@ -1,3 +1,5 @@
+NEXT: Bibliographies: The Immigrant Experience in American Fiction : An Annotated Bibliography
+Folklore 2/2 | Photos 1/1 | Contributions 1/1 | Dictionaries 7/7 | Cookbooks 13/13 | Bibliographies 12/23
 California - <a href="https://francolibrary.org/items/browse?tags=California">California</a>
 Woonsocket RI - <a href="https://francolibrary.org/items/browse?tags=Woonsocket+RI">Woonsocket RI</a>
 Vermont - <a href="https://francolibrary.org/items/browse?tags=Vermont">Vermont</a>
@@ -10,3 +12,39 @@ Maine - <a href="https://francolibrary.org/items/browse?tags=Maine">Maine</a>
 Lowell MA - <a href="https://francolibrary.org/items/browse?tags=Lowell+MA">Lowell MA</a>
 Fall River MA - <a href="https://francolibrary.org/items/browse?tags=Fall+River+MA">Fall River MA</a>
 Québec - <a href="https://francolibrary.org/items/browse?tags=Québec">Québec</a>
+Canada - <a href="https://francolibrary.org/items/browse?tags=Canada">Canada</a>
+Minnesota - <a href="https://francolibrary.org/items/browse?tags=Minnesota">Minnesota</a>
+Wisconsin - <a href="https://francolibrary.org/items/browse?tags=Wisconsin">Wisconsin</a>
+Augusta ME - <a href="https://francolibrary.org/items/browse?tags=Augusta+ME">Augusta ME</a>
+Kennebec River Valley - <a href="https://francolibrary.org/items/browse?tags=Kennebec+River+Valley">Kennebec River Valley</a>
+Sand Hill ME - <a href="https://francolibrary.org/items/browse?tags=Sand+Hill+ME">Sand Hill ME</a>
+France - <a href="https://francolibrary.org/items/browse?tags=France">France</a>
+North America - <a href="https://francolibrary.org/items/browse?tags=North+America">North America</a>
+Berlin NH - <a href="https://francolibrary.org/items/browse?tags=Berlin+NH">Berlin NH</a>
+St. John River Valley - <a href="https://francolibrary.org/items/browse?tags=St.+John+River+Valley">St. John River Valley</a>
+United States - <a href="https://francolibrary.org/items/browse?tags=United+States">United States</a>
+Eagle Lake ME - <a href="https://francolibrary.org/items/browse?tags=Eagle+Lake+ME">Eagle Lake ME</a>
+Fort Kent ME - <a href="https://francolibrary.org/items/browse?tags=Fort+Kent+ME">Fort Kent ME</a>
+Grand Isle ME - <a href="https://francolibrary.org/items/browse?tags=Grand+Isle+ME">Grand Isle ME</a>
+Keegan ME - <a href="https://francolibrary.org/items/browse?tags=Keegan+ME">Keegan ME</a>
+Madawaska ME - <a href="https://francolibrary.org/items/browse?tags=Madawaska+ME">Madawaska ME</a>
+Notre Dame ME - <a href="https://francolibrary.org/items/browse?tags=Notre+Dame+ME">Notre Dame ME</a>
+Sinclair ME - <a href="https://francolibrary.org/items/browse?tags=Sinclair+ME">Sinclair ME</a>
+Van Buren ME - <a href="https://francolibrary.org/items/browse?tags=Van+Buren+ME">Van Buren ME</a>
+Ogunquit ME - <a href="https://francolibrary.org/items/browse?tags=Ogunquit+ME">Ogunquit ME</a>
+New Brunswick - <a href="https://francolibrary.org/items/browse?tags=New+Brunswick">New Brunswick</a>
+Vermont - <a href="https://francolibrary.org/items/browse?tags=Vermont">Vermont</a>
+French Island ME - <a href="https://francolibrary.org/items/browse?tags=French+Island+ME">French Island ME</a>
+Old Town ME - <a href="https://francolibrary.org/items/browse?tags=Old+Town+ME">Old Town ME</a>
+Rhode Island - <a href="https://francolibrary.org/items/browse?tags=Rhode+Island">Rhode Island</a>
+Grand Isle ME - <a href="https://francolibrary.org/items/browse?tags=Grand+Isle+ME">Grand Isle ME</a>
+Chicopee MA - <a href="https://francolibrary.org/items/browse?tags=Chicopee+MA">Chicopee MA</a>
+Holyoke MA - <a href="https://francolibrary.org/items/browse?tags=Holyoke+MA">Holyoke MA</a>
+Massachusetts - <a href="https://francolibrary.org/items/browse?tags=Massachusetts">Massachusetts</a>
+Aroostook County ME - <a href="https://francolibrary.org/items/browse?tags=Aroostook+County+ME">Aroostook County ME</a>
+Barre VT - <a href="https://francolibrary.org/items/browse?tags=Barre+VT">Barre VT</a>
+New York - <a href="https://francolibrary.org/items/browse?tags=New+York">New York</a>
+Connecticut - <a href="https://francolibrary.org/items/browse?tags=Connecticut">Connecticut</a>
+Louisiana - <a href="https://francolibrary.org/items/browse?tags=Louisiana">Louisiana</a>
+Waterville ME - <a href="https://francolibrary.org/items/browse?tags=Waterville+ME">Waterville ME</a>
+Worcester MA - <a href="https://francolibrary.org/items/browse?tags=Worcester+MA">Worcester MA</a>
