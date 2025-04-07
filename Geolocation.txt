@@ -1,0 +1,12 @@
+California - <a href="https://francolibrary.org/items/browse?tags=California">California</a>
+Woonsocket RI - <a href="https://francolibrary.org/items/browse?tags=Woonsocket+RI">Woonsocket RI</a>
+Vermont - <a href="https://francolibrary.org/items/browse?tags=Vermont">Vermont</a>
+Providence RI - <a href="https://francolibrary.org/items/browse?tags=Providence+RI">Providence RI</a>
+New Hampshire - <a href="https://francolibrary.org/items/browse?tags=New+Hampshire">New Hampshire</a>
+New England - <a href="https://francolibrary.org/items/browse?tags=New+England">New England</a>
+Michigan - <a href="https://francolibrary.org/items/browse?tags=Michigan">Michigan</a>
+Manchester NH - <a href="https://francolibrary.org/items/browse?tags=Manchester+NH">Manchester NH</a>
+Maine - <a href="https://francolibrary.org/items/browse?tags=Maine">Maine</a>
+Lowell MA - <a href="https://francolibrary.org/items/browse?tags=Lowell+MA">Lowell MA</a>
+Fall River MA - <a href="https://francolibrary.org/items/browse?tags=Fall+River+MA">Fall River MA</a>
+Québec - <a href="https://francolibrary.org/items/browse?tags=Québec">Québec</a>
