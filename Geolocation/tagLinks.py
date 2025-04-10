@@ -9,7 +9,7 @@ def process_and_write(strings, filename):
             # Replace spaces with "+"
             modified_string = string.replace(" ", "+")
             # Write to file in the required format
-            f.write(f'<a href="https://francolibrary.org/items/browse?tags={modified_string}>{string}<a>\n')
+            f.write(f'<a href="https://francolibrary.org/items/browse?tags={modified_string}">{string}</a>\n')
 
 # Output to 'tagLinks.txt'
 process_and_write(CheckList, "tagLinks.txt")
