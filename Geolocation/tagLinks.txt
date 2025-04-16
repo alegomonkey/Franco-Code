@@ -768,7 +768,6 @@
 <a href="https://francolibrary.org/items/browse?tags=Lyndonville+VT">Lyndonville VT</a>
 <a href="https://francolibrary.org/items/browse?tags=Lynn+MA">Lynn MA</a>
 <a href="https://francolibrary.org/items/browse?tags=Machias+ME">Machias ME</a>
-
 <a href="https://francolibrary.org/items/browse?tags=Mackinac+Island">Mackinac Island</a>
 <a href="https://francolibrary.org/items/browse?tags=Madawaska+ME">Madawaska ME</a>
 <a href="https://francolibrary.org/items/browse?tags=Madison+ME">Madison ME</a>
@@ -1120,7 +1119,7 @@
 <a href="https://francolibrary.org/items/browse?tags=Pointe+Coupée+Parish+LA">Pointe Coupée Parish LA</a>
 <a href="https://francolibrary.org/items/browse?tags=Poland">Poland</a>
 <a href="https://francolibrary.org/items/browse?tags=Polish+Americans">Polish Americans</a>
-<a href="https://francolibrary.org/items/browse?tags=Polk+Countyy+MI">Polk Countyy MI</a>
+<a href="https://francolibrary.org/items/browse?tags=Polk+County+MI">Polk County MI</a>
 <a href="https://francolibrary.org/items/browse?tags=Pomfret+CT">Pomfret CT</a>
 <a href="https://francolibrary.org/items/browse?tags=Pontook+Reservoir+NH">Pontook Reservoir NH</a>
 <a href="https://francolibrary.org/items/browse?tags=Popham+ME">Popham ME</a>
